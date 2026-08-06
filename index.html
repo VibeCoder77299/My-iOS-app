@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Standalone App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Browser</title>
     
     <!-- iOS Standalone App Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="My iOS App">
+    <meta name="apple-mobile-web-app-title" content="Browser">
     
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app-container">
-        <h1>Welcome to My App</h1>
-        <p>This runs as a standalone app on your iPhone.</p>
-        <button id="clickBtn">Clicks: 0</button>
+    <!-- Browser Top Address Bar -->
+    <div class="browser-header">
+        <input type="text" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)">
+        <button id="goBtn">Go</button>
+    </div>
+
+    <!-- Website Display Window -->
+    <div class="browser-body">
+        <iframe id="browserFrame" src="https://example.com"></iframe>
     </div>
 
     <script src="app.js"></script>
